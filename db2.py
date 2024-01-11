@@ -27,11 +27,19 @@ for row in result.all():
     result_dict = {}
     # Access column names directly (without using row.keys()):
     for i in range(len(row._fields)):  # Use row._fields to get column names
-
+        # print(f"row._fields = {row._fields}")
+        
         result_dict[row._fields[i]] = row[i]  # Get column name and value
+        
+        print(f"\n\n\tRow({row_no}) field ({row._fields[i]}) have value ({row[i]})")
+        print(f"\t\tresult_dicts = {result_dict}")
+    
+    row_no += 1 # to store the value of each row.
     
     result_dicts.append(result_dict)
-    
-    print(result_dicts)
     print(f"\n\n")
+    
+    # rds = result_dicts
+    # print(result_dicts)
+    
     
