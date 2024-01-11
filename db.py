@@ -2,9 +2,9 @@ from sqlalchemy import create_engine, text
 import sqlalchemy
 # print(f'\nCurrent version of sqlalchemy is:- {sqlalchemy.__version__}\n')
 
-username = "82wtzalqbqxfzcgi7fw8"
+username = "a1xyz68xar0rnkz6qs28"
 hostid = "aws.connect.psdb.cloud"
-password = "pscale_pw_Jjt7LjnoCB5SRnk6N9a75xY29JgYpzru8QqLwHbIpmh"
+password = "pscale_pw_QUYkpeTJum4OgNBQUfyDbGbZypHSLrPRFZFEqnYZUVD"
 database = "mediahub"
 
 db_connect_string = f"mysql+pymysql://{username}:{password}@{hostid}/{database}?charset=utf8mb4" 
@@ -35,8 +35,5 @@ for row in result.all():
     
     result_dicts.append(result_dict)
     
-    # print(result_dicts)
-    print(f"\n\n")
-    
-print(result_dicts)
+print(result_dicts) # displaying list .
     
