@@ -2,7 +2,12 @@ from sqlalchemy import create_engine, text
 import sqlalchemy
 # print(f'\nCurrent version of sqlalchemy is:- {sqlalchemy.__version__}\n')
 
-db_connect_string = "mysql+pymysql://cmwc0oofev4bg3vqdp4p:pscale_pw_2b5cYv8A65bCDflJFGCBZYZaiJvgNkAPbs3v2pUTI6Z@aws.connect.psdb.cloud/mediahub?charset=utf8mb4" 
+username = "e3j7eew9tagysum8w6fa"
+hostid = "aws.connect.psdb.cloud"
+password = "pscale_pw_QNV3jNVCG8Rv7ffY8OTUUjtcvrURpH3gqsF32LxiMbU"
+database = "mediahub"
+
+db_connect_string = f"mysql+pymysql://{username}:{password}@{hostid}/{database}?charset=utf8mb4" 
 
 engine = create_engine(
     db_connect_string,
@@ -18,13 +23,11 @@ with engine.connect() as conn:
     
     result_dicts = []
     rds = []
-    
-    row_no = 1
 
 for row in result.all():
-    # print(row)
     
     result_dict = {}
+    
     # Access column names directly (without using row.keys()):
     for i in range(len(row._fields)):  # Use row._fields to get column names
 
