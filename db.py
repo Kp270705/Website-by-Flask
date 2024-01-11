@@ -35,7 +35,7 @@ for row in result.all():
     
     result_dicts.append(result_dict)
     
-    print(result_dicts)
+    # print(result_dicts)
     print(f"\n\n")
     
 print(result_dicts)
