@@ -5,6 +5,7 @@ from flask import Flask, render_template, jsonify      # there is a class "flask
 from db import load_jobs_from_db
 
 
+
 app = Flask(__name__)
 
 

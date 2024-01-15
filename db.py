@@ -23,28 +23,6 @@ engine = create_engine(
         }
     })
 
-
-
-# ==============================================================================
-
-# with engine.connect() as conn:
-#     result = conn.execute(text("select * from jobs"))
-    
-#     result_dicts = []
-
-# for row in result.all():
-    
-#     result_dict = {}
-    
-#     # Access column names directly (without using row.keys()):
-#     for i in range(len(row._fields)):  # Use row._fields to get column names
-
-#         result_dict[row._fields[i]] = row[i]  # Get column name and value
-    
-#     result_dicts.append(result_dict)
-    
-# print(result_dicts) # displaying list .
-
 # =======================================================================================
 
 def load_jobs_from_db():
